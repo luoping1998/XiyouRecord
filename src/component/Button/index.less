@@ -1,0 +1,20 @@
+@import '~styles/mixins.less';
+
+.xiyou-record-button {
+  font-size: 14px;
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.xiyou-record-button-default {
+  .xiyou-record-button();
+  background: @main-color;
+  color: white;
+}
+
+.xiyou-record-button-important {
+  .xiyou-record-button();
+  color: @main-color;
+}

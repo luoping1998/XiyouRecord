@@ -1,0 +1,19 @@
+@import "~styles/consts";
+
+.vw(@cssProp, @cssValue) {
+  @{cssProp}: @cssValue / 375px * 100vw;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: col;
+  justify-content: space-between;
+  align-items: center;
+}

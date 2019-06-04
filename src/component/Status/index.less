@@ -1,0 +1,22 @@
+@import '~styles/mixins.less';
+
+.xiyou-record-status {
+  .flex-row-center();
+  flex-wrap: nowrap;
+  padding: 0 10px;
+
+  .xiyou-record-button {
+    margin-right: 10px;
+  }
+}
+
+.xiyou-record-username {
+  display: inline;
+}
+
+@media screen and (max-width: @max-mobile-width) {
+  .xiyou-record-status {
+    .vw(padding-left, 10px);
+    .vw(padding-right, 10px);
+  }
+}
