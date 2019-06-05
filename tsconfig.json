@@ -19,6 +19,7 @@
         "pages": ["pages/*"],
         "styles": ["styles/*"],
         "types": ["types/*"],
+        "@routes": ["routes/*"],
         "utils": ["utils/*"]
       },
       "lib": [

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom'; 
 import PC from './pages/PC';
 import Mobile from './pages/Mobile';
 import './index.less';
@@ -7,8 +8,10 @@ import './index.less';
 function App() {
   return (
     <div className="xiyou-record">
-      <PC />
-      <Mobile />
+      <Router>
+        <PC />
+        <Mobile />
+      </Router>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { MouseEventHandler } from 'react';
+import { Link } from 'react-router-dom';
 import Button, { ButtonType } from 'component/Button';
 import Avator from 'component/Avator';
 import { UserStatus, UserStatusType } from 'utils/const';
@@ -25,8 +26,12 @@ export default function Status(props: StatusProps) {
   }else {
     return (
       <div className="xiyou-record-status">
-      <Button onClick={onLoginClick} type={ButtonType.DEFAULT}>登录</Button>
-      <Button onClick={onSignUpClick} type={ButtonType.IMORTANT}>注册</Button>
+      <Link to="/login">
+        <Button type={ButtonType.DEFAULT}>登录</Button>
+      </Link>
+      <Link to="/sign_up">
+        <Button onClick={onSignUpClick} type={ButtonType.IMORTANT}>注册</Button>
+      </Link>
     </div> 
     )
   }

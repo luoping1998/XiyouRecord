@@ -12,7 +12,7 @@ interface ButtonInterface {
   children: string | ReactChildren;
   classStyles?: string;
   type?: string;
-  onClick: MouseEventHandler
+  onClick?: MouseEventHandler
 }
 
 export default function Button(props: ButtonInterface) {
