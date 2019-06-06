@@ -2,8 +2,14 @@ const htmlPlugin = require('html-webpack-plugin');
 
 const { resolve } = require('path');
 module.exports = {
+    optimization: {
+        runtimeChunk: true,
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     entry: {
-        index: resolve(__dirname, '../src/app.tsx')
+        index: [resolve(__dirname, '../src/app.tsx'), resolve(__dirname, '../index.html')]
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js", ".json", "less"],
@@ -22,6 +28,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(html)$/,
+                loader: 'html-loader'
+            },
             {
                 test: /\.tsx?$/,
                 include: [resolve(__dirname, '../src')],

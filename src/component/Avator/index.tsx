@@ -2,11 +2,12 @@ import React, { MouseEventHandler } from 'react';
 
 interface AvatorProps {
   url: string;
-  onClick?: MouseEventHandler;
+  size: number;
   type?: string;
+  onClick?: MouseEventHandler;
 }
 
 export default function Avator(props: AvatorProps) {
-  const { url, onClick } = props;
-  return <img src={url} onClick={onClick} className="xiyou-record-avator"/>
+  const { url, size, onClick } = props;
+  return <img src={url} onClick={onClick} style={{width: size}} className="xiyou-record-avator"/>
 }

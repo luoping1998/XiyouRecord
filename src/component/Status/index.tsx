@@ -1,7 +1,7 @@
 import React, { MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 import Button, { ButtonType } from 'component/Button';
-import Avator from 'component/Avator';
+import UserStatusItem from './userStatus';
 import { UserStatus, UserStatusType } from 'utils/const';
 import './index.less';
 
@@ -9,20 +9,15 @@ interface StatusProps {
   status: UserStatusType;
   avator?: string;
   username?: string;
+  size?: number;
   onAvatorClick?: MouseEventHandler;
-  onLoginClick?: MouseEventHandler;
   onSignUpClick?: MouseEventHandler;
 }
 
 export default function Status(props: StatusProps) {
-  const { status, avator, username, onAvatorClick, onLoginClick, onSignUpClick } = props;
+  const { status, avator, size, username, onAvatorClick, onSignUpClick } = props;
   if (status === UserStatus.ONLINE) {
-    return (
-      <div className="xiyou-record-status">
-        <Avator url={avator} onClick={onAvatorClick}/>
-        <p className="xiyou-record-username">{username}</p>
-      </div> 
-    )
+    return <UserStatusItem size={size} avator={avator} username={username} onAvatorClick={onAvatorClick}/>
   }else {
     return (
       <div className="xiyou-record-status">

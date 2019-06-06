@@ -1,0 +1,31 @@
+@import '~styles/mixins.less';
+
+.xiyou-record-actitem {
+  width: 45%;
+  height: auto;
+  padding: 20px 5px;
+  position: relative;
+  background: @White;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.xiyou-record-actcover {
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  .flex-row-center();
+  justify-content: space-around;
+}
+
+.xiyou-record-like,
+.xiyou-record-comment {
+  cursor: pointer;
+  background: @main-color;
+  width: 40px;
+  height: 40px;
+}
