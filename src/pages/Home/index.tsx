@@ -29,14 +29,12 @@ export default function Home() {
 
   return (
     <div className="xiyou-record-home">
-      <div className="xiyou-record-home-inner">
-        <Menu
-          options={options}
-          activeName={key}
-          activeClassName={activeClassName}
-          onChangeActive={handleChangeActive}
-        />
-      </div>
+      <Menu
+        options={options}
+        activeName={key}
+        activeClassName={activeClassName}
+        onChangeActive={handleChangeActive}
+      />
     </div>
   )
 }

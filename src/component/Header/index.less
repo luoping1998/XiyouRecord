@@ -2,12 +2,13 @@
 
 .xiyou-record-header {
   width: 100%;
+  padding: 0 15px;
   background: @White;
   border-bottom: 1px solid rgba(0,0,0,.0975);
 }
 
 .xiyou-record-header-inner {
-  width: 1024px;
+  max-width: 1024px;
   height: 80px;
   margin: 0 auto;
   .flex-row-center();
@@ -17,5 +18,9 @@
   .xiyou-record-header-inner {
     .vw(height, 80);
     width: 100%;
+  }
+
+  .xiyou-record-search-input {
+    display: none;
   }
 }

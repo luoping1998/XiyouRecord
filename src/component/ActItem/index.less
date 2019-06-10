@@ -1,31 +1,89 @@
 @import '~styles/mixins.less';
 
 .xiyou-record-actitem {
-  width: 45%;
+  width: 47%;
+  min-width: 370px;
   height: auto;
-  padding: 20px 5px;
+  padding-top: 15px;
   position: relative;
   background: @White;
-  border: 1px solid black;
-  border-radius: 4px;
+  border: 1px solid @light-gray;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .xiyou-record-actcover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 3;
+  cursor: pointer;
   .flex-row-center();
   justify-content: space-around;
+  display: none;
 }
 
 .xiyou-record-like,
 .xiyou-record-comment {
-  cursor: pointer;
-  background: @main-color;
+  background: @White;
   width: 40px;
   height: 40px;
+}
+
+.xiyou-record-actitem-footer {
+  border-top: 1px solid @light-gray;
+  .flex-row-center();
+}
+
+.xiyou-record-actitem-button {
+  padding: 5px 20px;
+  font-size: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: @main-color;
+  }
+}
+
+.xiyou-record-actitem-details {
+  padding: 10px 15px;
+}
+
+.xiyou-record-actitem-rich {
+  height: auto;
+  max-height: 60px;
+  line-height: 20px;
+  overflow: hidden;
+  font-size: 14px;
+  color: @Black;
+}
+
+.xiyou-record-actitem-imgs {
+  height: auto;
+  padding-top: 10px;
+  display: flex;
+  & :not(:last-child) {
+    margin-right: 1.5%;
+  }
+}
+
+.xiyou-record-actitem-img {
+  width: 33%;
+  padding: 16.5% 0;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.xiyou-record-actitem-img-only {
+  width: 60%;
+}
+
+@media screen and (max-width: @max-mobile-width) {
+  .xiyou-record-actitem {
+    width: 90%;
+  }
 }

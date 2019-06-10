@@ -1,7 +1,7 @@
 @import '~styles/mixins.less';
 
 .xiyou-record-status {
-  .flex-row-center();
+  display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
   padding: 0 10px;
@@ -11,12 +11,22 @@
   }
 }
 
-.xiyou-record-username {
-  display: inline;
-  font-size: 20px;
+.xiyou-record-box {
+  .flex-col-center();
   margin-left: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
+.xiyou-record-username {
+  display: inline;
+  font-size: 15px;
+}
+
+.xiyou-record-time {
+  font-size: 10px;
+  color: @Gray;
+}
 @media screen and (max-width: @max-mobile-width) {
   .xiyou-record-status {
     .vw(padding-left, 10px);

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import createRoutes from 'routes';
 import Header from 'component/Header';
 import { routesConfig as config} from 'utils/const'
+import './index.less';
 
 export default function PC() {
   const [ value, setValue ] = useState('');
@@ -14,7 +15,9 @@ export default function PC() {
   return (
     <div className="xiyou-record-pc">
       <Header status={0} onChange={onChangeValue} value={value}/>
-      {routes}
+      <div className="xiyou-record-pc-inner">
+        {routes}      
+      </div>
     </div>
   )
 }

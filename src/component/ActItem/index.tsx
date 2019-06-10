@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import UserStatusItem from 'component/Status/userStatus';
-import ActCover from './cover';
+import Details from './details';
+import ActFooter from './footer';
+import url from 'images/name.png';
+
 import './index.less';
 
 export interface ActItemProps {
@@ -15,12 +18,24 @@ export interface ActItemProps {
 
 export default function ActItem(props: ActItemProps) {
   const { id, avator, username, startDate, createTime, likeCount, commentCount } = props;
+  function hanldeTrans(e) {
+    e.preventDefault();
+  }
+
+  function handleComment(e) {
+    e.preventDefault();
+  }
+
+  function hanldeLike(e) {
+    e.preventDefault();
+  }
+
+  const imgs = [url, url, url, url, url, url, url];
   return (
     <div className="xiyou-record-actitem">
-      <ActCover id={id} likeCount={likeCount} commentCount={commentCount} />
-      <UserStatusItem size={35} avator={avator} username={username} />
-      <div className="xiyou-record-actitem-details">
-      </div>
+      <UserStatusItem size={35} avator={avator} username={username} time={createTime}/>
+      <Details text={'大家好，我们是西柚记。'} imgs={imgs}/>
+      <ActFooter handleComment={handleComment} hanldeLike={hanldeLike} hanldeTrans={hanldeTrans} />
     </div>
   )
 }

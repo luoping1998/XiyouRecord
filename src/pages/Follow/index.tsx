@@ -7,7 +7,7 @@ export default function Follow() {
   const item: ActItemProps = {
     id: '1',
     avator: avatorURL,
-    username: 'username',
+    username: '计算机学院',
     startDate: '2019-9-8',
     createTime: '2019-9-4',
     likeCount: 12,
@@ -16,7 +16,6 @@ export default function Follow() {
 
   return (
     <div className="xiyou-record-follow">
-      <p>Follow</p>
       <ActItem {...item}/>
     </div>
   )
